@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Star Wars API</string>
+    <string name="star_wars_logo">Star wars logo</string>
+    <string name="find_all_your_favorite_character">Find all your favorite character</string>
+    <string name="you_can_find_out_all_the_information_about_your_favorite_characters">You can find out all the information about your favorite characters</string>
+    <string name="see_more">See more…</string>
+    <string name="home">Home</string>
+    <string name="characters">Characters</string>
+    <string name="yoda">Yoda</string>
 </resources>
