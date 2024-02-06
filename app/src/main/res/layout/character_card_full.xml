@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftPartOfScreen"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="@color/background_top"
+        app:layout_constraintEnd_toStartOf="@+id/rightPartOfScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ufo"
+            android:src="@drawable/ufo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/characterGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/rectangle_with_corners"
+            android:fontFamily="@font/karla"
+            android:paddingStart="@dimen/dp16"
+            android:paddingEnd="@dimen/dp16"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/characterAge"
+            tools:backgroundTint="@color/green"
+            tools:text="male" />
+
+        <TextView
+            android:id="@+id/characterAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/rectangle_with_corners"
+            android:fontFamily="@font/karla"
+            android:paddingStart="@dimen/dp16"
+            android:paddingEnd="@dimen/dp16"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:backgroundTint="@color/blue"
+            tools:text="896BBY" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rightPartOfScreen"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="@drawable/gradient_rectangle_reversed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftPartOfScreen"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/characterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/karla"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp32"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Yoda" />
+
+        <LinearLayout
+            android:id="@+id/linerLayoutContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:background="@drawable/rectangle_with_corners"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/dp8"
+            app:layout_constraintStart_toStartOf="@+id/characterName"
+            app:layout_constraintTop_toBottomOf="@+id/characterName">
+
+            <TextView
+                android:id="@+id/hairColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karla"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                tools:text="hair color: green" />
+
+            <TextView
+                android:id="@+id/skinColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karla"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                tools:text="skin color: green" />
+
+            <TextView
+                android:id="@+id/eyeColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/karla"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                tools:text="eye color: green" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/firstWhiteRectangle"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="@dimen/dp16"
+            android:background="@drawable/rectangle_with_corners"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/linerLayoutContainer"
+            app:layout_constraintTop_toBottomOf="@+id/linerLayoutContainer" />
+
+        <View
+            android:id="@+id/firstCircleInsideRectangle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="@id/firstWhiteRectangle"
+            app:layout_constraintStart_toStartOf="@id/firstWhiteRectangle"
+            app:layout_constraintTop_toTopOf="@+id/firstWhiteRectangle" />
+
+        <TextView
+            android:id="@+id/characterHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toBottomOf="@+id/firstCircleInsideRectangle"
+            app:layout_constraintEnd_toEndOf="@id/firstCircleInsideRectangle"
+            app:layout_constraintStart_toStartOf="@id/firstCircleInsideRectangle"
+            app:layout_constraintTop_toTopOf="@id/firstCircleInsideRectangle"
+            tools:text="66" />
+
+        <TextView
+            android:id="@+id/characterHeightFixedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla"
+            android:text="@string/height"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toEndOf="@id/firstCircleInsideRectangle"
+            app:layout_constraintStart_toStartOf="@id/firstCircleInsideRectangle"
+            app:layout_constraintTop_toBottomOf="@+id/firstCircleInsideRectangle" />
+
+
+        <View
+            android:id="@+id/secondWhiteRectangle"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp16"
+            android:background="@drawable/rectangle_with_corners"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toEndOf="@id/firstWhiteRectangle"
+            app:layout_constraintTop_toBottomOf="@+id/linerLayoutContainer" />
+
+        <View
+            android:id="@+id/secondCircleInsideRectangle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="@id/secondWhiteRectangle"
+            app:layout_constraintStart_toStartOf="@id/secondWhiteRectangle"
+            app:layout_constraintTop_toTopOf="@+id/secondWhiteRectangle" />
+
+        <TextView
+            android:id="@+id/characterMass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toBottomOf="@+id/secondCircleInsideRectangle"
+            app:layout_constraintEnd_toEndOf="@id/secondCircleInsideRectangle"
+            app:layout_constraintStart_toStartOf="@id/secondCircleInsideRectangle"
+            app:layout_constraintTop_toTopOf="@id/secondCircleInsideRectangle"
+            tools:text="17" />
+
+        <TextView
+            android:id="@+id/characterMassFixedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karla"
+            android:text="@string/mass"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toEndOf="@id/secondCircleInsideRectangle"
+            app:layout_constraintStart_toStartOf="@id/secondCircleInsideRectangle"
+            app:layout_constraintTop_toBottomOf="@+id/secondCircleInsideRectangle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

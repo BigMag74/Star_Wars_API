@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@id/secondCircle" />
 
     <TextView
-        android:id="@+id/gender"
+        android:id="@+id/characterGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp8"
@@ -103,7 +103,7 @@
         tools:text="male" />
 
     <TextView
-        android:id="@+id/age"
+        android:id="@+id/characterAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp16"
@@ -114,7 +114,7 @@
         android:paddingEnd="@dimen/dp16"
         android:textColor="@color/black"
         android:textSize="@dimen/sp11"
-        app:layout_constraintStart_toEndOf="@id/gender"
+        app:layout_constraintStart_toEndOf="@id/characterGender"
         app:layout_constraintTop_toBottomOf="@id/height"
         tools:backgroundTint="@color/blue"
         tools:text="896BBY" />
