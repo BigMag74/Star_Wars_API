@@ -7,4 +7,9 @@
     <string name="home">Home</string>
     <string name="characters">Characters</string>
     <string name="yoda">Yoda</string>
+    <string name="peoples">Peoples</string>
+    <string name="for_you_to_choose_your_favorite">for you to choose your favorite</string>
+    <string name="color_eye">color eye</string>
+    <string name="height">height</string>
+    <string name="mass">mass</string>
 </resources>
