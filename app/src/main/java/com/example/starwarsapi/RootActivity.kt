@@ -2,7 +2,9 @@ package com.example.starwarsapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.starwarsapi.databinding.ActivityRootBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,14 +17,26 @@ class RootActivity : AppCompatActivity() {
         binding = ActivityRootBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navigationView: BottomNavigationView = binding.bottomNavigationView
+        val navigationView = binding.bottomNavigationView
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.rootFragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
+        navigationView.setOnItemSelectedListener { item ->
 
-        navigationView.setupWithNavController(navController)
+            when (item.itemId) {
+                R.id.homeFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.rootFragmentContainerView, HomeFragment())
+                        .commit()
+                    return@setOnItemSelectedListener true
+                }
 
+                else -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.rootFragmentContainerView, CharactersFragment())
+                        .commit()
+                    return@setOnItemSelectedListener true
+                }
+            }
 
+        }
     }
 }
