@@ -2,12 +2,8 @@ package com.example.starwarsapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupWithNavController
+import com.example.starwarsapi.characters.ui.fragment.CharactersFragment
 import com.example.starwarsapi.databinding.ActivityRootBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RootActivity : AppCompatActivity() {
 

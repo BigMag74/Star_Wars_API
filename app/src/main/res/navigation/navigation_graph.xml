@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.example.starwarsapi.CharactersFragment"
+        android:name="com.example.starwarsapi.characters.ui.fragment.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_characters" />
 </navigation>

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.StarWarsAPI"
         tools:targetApi="31" >
         <activity
-            android:name=".CharactersFragment"
+            android:name=".characters.ui.fragment.CharactersFragment"
             android:exported="false" />
         <activity
             android:name=".RootActivity"

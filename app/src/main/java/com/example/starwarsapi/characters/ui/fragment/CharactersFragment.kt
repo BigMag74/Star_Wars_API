@@ -1,4 +1,4 @@
-package com.example.starwarsapi
+package com.example.starwarsapi.characters.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
